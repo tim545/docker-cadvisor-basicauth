@@ -4,7 +4,7 @@
 
 ### Running the container
 
-Use the command below, making sure you replace `<my-username>` and `<my-password>` with your own values (remove the `<>` as well).
+Use the command below, making sure you replace the `USERNAME` and `PASSWORD` environment variables with your own values.
 
 ```
 docker run \
@@ -16,7 +16,9 @@ docker run \
   --detach=true \
   --name=cadvisor-basicauth \
   --restart=always \
- cadvisor-basicauth:latest
+  -e USERNAME=admin \
+  -e PASSWORD=Password1 \
+ tim545/cadvisor-basicauth:latest
 ```
 
 The container accepts three arguments:
