@@ -4,7 +4,21 @@
 
 ### Running the container
 
-Use the command below, making sure you replace the `USERNAME` and `PASSWORD` environment variables with your own values.
+The container can be run without any configuration but to set your own username and password you will need to build the image locally.
+
+`git clone https://github.com/tim545/docker-cadvisor-basicauth`
+
+`docker build --build-arg USERNAME=admin --build-arg PASSWORD=Password1 -t tim545/cadvisor-basicauth .`
+
+Note the `--build-arg` parameters, you can set those as any username and password values. The image accepts three build time arguments in total:
+
+| Argument | Description | Default |
+| --- | --- | --- |
+| **USERNAME** | basic auth username | admin |
+| **PASSWORD** | basic auth password | Password1 |
+| **PORT** | port the container will run on | 8080 |
+
+To run your image use the command below. This command can be run without the steps above but your settings will be the default which is too insecure for any production environment.
 
 ```
 docker run \
@@ -16,15 +30,6 @@ docker run \
   --detach=true \
   --name=cadvisor-basicauth \
   --restart=always \
-  -e USERNAME=admin \
-  -e PASSWORD=Password1 \
  tim545/cadvisor-basicauth:latest
 ```
 
-The container accepts three arguments:
-
-| Argument | Description | Default |
-| --- | --- | --- |
-| **USERNAME** | basic auth username | `admin` |
-| **PASSWORD** | basic auth password | `Password1` |
-| **PORT** | port the container will run on | `8080` |

@@ -1,8 +1,8 @@
 FROM google/cadvisor:latest
 
-ENV USERNAME=admin
-ENV PASSWORD=Password1
-ENV PORT=8080
+ARG USERNAME=admin
+ARG PASSWORD=Password1
+ARG PORT=8080
 
 RUN apk add --update apache2-utils \
     && rm -rf /var/cache/apk/*
