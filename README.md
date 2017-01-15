@@ -8,6 +8,8 @@ The container can be run without any configuration but to set your own username 
 
 `git clone https://github.com/tim545/docker-cadvisor-basicauth`
 
+`cd docker-cadvisor-basicauth/`
+
 `docker build --build-arg USERNAME=admin --build-arg PASSWORD=Password1 -t tim545/cadvisor-basicauth .`
 
 Note the `--build-arg` parameters, you can set those as any username and password values. The image accepts three build time arguments in total:
