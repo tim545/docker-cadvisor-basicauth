@@ -2,7 +2,7 @@
 
 [cAdvisor](https://github.com/google/cadvisor) wrapped in a container with basic auth enabled.
 
-### Running the container
+## Running the container
 
 The container can be run without any configuration but to set your own username and password you will need to build the image locally as the username and password are set at build time.
 
@@ -36,7 +36,7 @@ docker run \
 
 _Note: This command can be run without the steps above, however your username, password and port settings will be the default values, which is ok for testing but too insecure for any production environment._
 
-### Build parameters
+## Build Parameters
 
 The image accepts three build time arguments in total:
 
@@ -48,12 +48,12 @@ The image accepts three build time arguments in total:
 
 They are used by adding the `--build-arg` option to the Docker `build command`, check the Docker documentation for more info about building an image locally.
 
-### Known Issues/Limitations
+## Known Issues/Limitations
 
 - It's possible this project could be improved to allow the build parameters to be parsed directly into the run command, however for now it must be built locally to set custom auth settings.
 - The characters accepted for the build parameters (e.g. password) may be limited by any potential keywords used by the Docker command or CLI.
 - If you forget and want to change your password you will have to delete and rebuild your container.
 
-### Contributing
+## Contributing
 
-Please feel free to raise and Issue or send me a PR
+Please feel free to raise an Issue or send me a PR
