@@ -32,7 +32,6 @@ docker run \
   --restart=always \
  tim545/cadvisor-basicauth:latest
 ```
-  
 
 _Note: This command can be run without the steps above, however your username, password and port settings will be the default values, which is ok for testing but too insecure for any production environment._
 
@@ -57,3 +56,7 @@ They are used by adding the `--build-arg` option to the Docker `build command`, 
 ## Contributing
 
 Please feel free to raise an Issue or send me a PR
+
+## @Mentions
+
+I started this project after reading the comments from @exetico and @vmarmol on this [Issue](https://github.com/google/cadvisor/issues/784#issuecomment-279984056)
