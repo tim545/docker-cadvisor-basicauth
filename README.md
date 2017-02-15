@@ -20,7 +20,7 @@ Note the `--build-arg` parameters, you can set those as any username and passwor
 | **PASSWORD** | basic auth password | Password1 |
 | **PORT** | port the container will run on | 8080 |
 
-To run your image use the command below. This command can be run without the steps above but your settings will be the default which is too insecure for any production environment.
+To run your image use the `run` command below.
 
 ```
 docker run \
@@ -35,3 +35,4 @@ docker run \
  tim545/cadvisor-basicauth:latest
 ```
 
+_Note: This command can be run without the steps above, however your username, password and port settings will be the default values, which is ok for testing but too insecure for any production environment._
